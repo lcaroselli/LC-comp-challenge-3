@@ -1,0 +1,48 @@
+* {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  margin: 0;
+  }
+
+
+/* Aside Nav */
+.user-image {
+  background-image: url(assets/img/kimmy.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 99%;
+  border-radius: 50%;
+  height: 120px;
+  margin: 10px auto;
+  width: 120px;
+}
+
+.nav-aside {
+  background-color: #354052;
+  width: 13vw;
+}
+
+.nav-main, .nav-admin, .nav-categories {
+  border-top: 2px outset #2c3749;
+  margin: 0px 16px;
+}
+
+section h4 {
+  color: #758096;
+  font-size: 12px;
+}
+
+.user-name, .nav-link {
+  color: #a9b4c6;
+  text-decoration: none;
+}
+
+.user-name {
+  text-align: center;
+}
