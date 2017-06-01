@@ -6,13 +6,35 @@ body {
   display: flex;
   flex-direction: row;
   font-family: 'Roboto', sans-serif;
-  height: 100%;
-  margin: 0;
-  }
+  min-height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+section h4 {
+  color: #758096;
+  font-size: 12px;
+  margin-top: 25px;
+}
 
 
-/* Aside Nav */
-.user-image {
+/* Nav Aside */
+#nav-aside {
+  background-color: #354052;
+  padding-right: 20px;
+  padding-top: 15px;
+}
+
+#nav-admin, #nav-categories, #nav-main {
+  border-top: 2px outset #2c3749;
+  height: 260px;
+  margin: 0px 16px;
+  width: 120px;
+}
+
+#user-image {
   background-image: url(assets/img/kimmy.png);
   background-position: top;
   background-repeat: no-repeat;
@@ -23,26 +45,437 @@ body {
   width: 120px;
 }
 
-.nav-aside {
-  background-color: #354052;
-  width: 13vw;
+#user-name {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 25px;
+  margin-top: 0;
+  text-align: center;
 }
 
-.nav-main, .nav-admin, .nav-categories {
-  border-top: 2px outset #2c3749;
-  margin: 0px 16px;
+.nav-link {
+  display: block;
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-section h4 {
-  color: #758096;
-  font-size: 12px;
+.nav-link:hover {
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
-.user-name, .nav-link {
+.nav-link, #user-name {
   color: #a9b4c6;
   text-decoration: none;
 }
 
-.user-name {
+#nav-calendar, #nav-home, #nav-jobs, #nav-job-boards, #nav-locations, #nav-resume, #nav-social, #nav-task, #nav-users, #nav-workflows {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 99%;
+  display: inline-block;
+  height: 18px;
+  margin-right: 15px;
+  width: 18px;
+}
+
+#nav-calendar {
+  background-image: url(assets/img/aside/calendar.svg);
+}
+
+#nav-down-arrow {
+  background-image: url(assets/img/aside/down-arrow.svg);
+  background-position: 5px 8.2px;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+#nav-down-arrow:hover {
+  cursor: pointer;
+}
+
+#nav-home {
+  background-image: url(assets/img/aside/home-interface.svg);
+}
+
+#nav-jobs {
+  background-image: url(assets/img/aside/suitcase.svg);
+}
+
+#nav-job-boards {
+  background-image: url(assets/img/aside/plan.svg);
+}
+
+#nav-locations {
+  background-image: url(assets/img/aside/location.svg);
+}
+
+#nav-resume {
+  background-image: url(assets/img/aside/newspaper.svg);
+}
+
+#nav-social {
+  background-image: url(assets/img/aside/share.svg);
+}
+
+#nav-task {
+  background-image: url(assets/img/aside/list.svg);
+}
+
+#nav-users {
+  background-image: url(assets/img/aside/users.svg);
+}
+
+#nav-workflows {
+  background-image: url(assets/img/aside/workflow.svg);
+}
+
+
+/* Checkboxes */
+.nav-checkbox {
+  color: #9CA6B7;
+  font-size: 13px;
+  margin-left: 8px;
+  position: relative;
+  top: -23px;
+  left: 14px;
+  text-decoration: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#admin-checkbox[type="checkbox"]+label:before,
+#design-checkbox[type="checkbox"]+label:before,
+#human-resources-checkbox[type="checkbox"]+label:before,
+#executive-checkbox[type="checkbox"]+label:before {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  content: "\00a0";
+  border: 1px inset #9CA6B7;
+}
+
+#admin-checkbox[type="checkbox"]:checked+label:before,
+#design-checkbox[type="checkbox"]:checked+label:before,
+#executive-checkbox[type="checkbox"]:checked+label:before,
+#human-resources-checkbox[type="checkbox"]:checked+label:before {
+  content: "\2713";
   text-align: center;
+  color: #EDF2EC;
+}
+
+#admin-checkbox[type="checkbox"]+label:before,
+#admin-checkbox[type="checkbox"]:checked+label:before {
+  background: #E8C812;
+}
+
+#design-checkbox[type="checkbox"]+label:before,
+#design-checkbox[type="checkbox"]:checked+label:before {
+  background: #C46D6D;
+}
+
+#executive-checkbox[type="checkbox"]+label:before,
+#executive-checkbox[type="checkbox"]:checked+label:before {
+  background: #3E9953;
+}
+
+#human-resources-checkbox[type="checkbox"]+label:before,
+#human-resources-checkbox[type="checkbox"]:checked+label:before {
+  background: #1BA1C6;
+}
+
+
+/* Main Container */
+#main-container {
+  width: 100%;
+}
+    /* Header */
+#main-header {
+  border: 2px solid #e6e9ef;
+  display: flex;
+  padding-top: 0px;
+}
+
+#main-header input {
+  background: url(assets/img/header/search.svg);
+  background-position: 5px 27px;
+  background-repeat: no-repeat;
+  background-size: 2.5%;
+  border: none;
+  margin-left: 15px;
+  padding-left:35px;
+  height: 30px;
+  width: 80%;
+}
+
+#navigate-site-btn, .search-input, #add-user-btn, #calendar-btn, #grid-btn {
+  background-clip: content-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 35%;
+  border-right: 1.5px solid #e6e9ef;
+  border-left: 1.5px solid #e6e9ef;
+  display: flex;
+  height: 40px;
+  margin: 0px;
+  padding: 25px;
+  width: 40px;
+}
+
+#navigate-site-btn:hover, #add-user-btn:hover, #calendar-btn:hover, #grid-btn:hover {
+  box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#add-user-btn {
+  background-image: url(assets/img/header/add-contact.svg);
+}
+
+#calendar-btn {
+  background-image: url(assets/img/header/calendar.svg);
+}
+
+#navigate-site-btn {
+  background-image: url(assets/img/header/menu.svg);
+}
+
+#search-bar-btn {
+  background-image: url(assets/img/header/search.svg);
+}
+
+#grid-btn {
+  background-image: url(assets/img/header/grid.svg);
+}
+
+    /* Job Container */
+#job-container, #job-container-nav, #graphic-container, #
+#job-description-container {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#job-title {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 0px;
+  word-spacing: 2px;
+}
+
+#location {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+#location img {
+  height: 15px;
+  width: 15px;
+}
+
+#location a {
+  color: #1FB8E2;
+  text-decoration: none;
+}
+/*INCLUDE BUTTON STYLING HERE*/
+
+    /* Job Container Navigation */
+.current-job-nav-content  a {
+  color: #9CA6B7;
+  margin-right: 35px;
+  text-decoration: none;
+}
+
+.current-job-nav-content  a:hover {
+  border-bottom: 3px solid teal;
+  padding-bottom: 8px;
+}
+
+    /* Main Section Container */
+#main-section-container {
+  background-color: #EDF2EC;
+  border-top: 3px solid #D4E2F9;
+}
+
+    /* Job Description Container */
+#job-description-container {
+  margin-bottom: 0;
+}
+
+#job-description-panel {
+  background-color: #FFFFFF;
+  width: 50%;
+}
+
+#job-description-panel p {
+  display: inline-block;
+}
+
+#job-description-header {
+  background-color: #78849E;
+  color: #FFFFFF;
+  height: 70px;
+}
+
+#job-description-header h3 {
+  font-weight: 400;
+}
+
+#position-title h3, #location-title h3, #employment-type h3, #experience-title h3, #status-title h3, #description-title h3, #hiring-lead h3, #approved-salary h3 {
+  color: #9CA6B7;
+  font-weight: 400;
+  margin-right: 20px;
+}
+
+#position-title, #location-title, #employment-type, #experience-title, #status-title, #description-title, #hiring-lead, #approved-salary {
+  display: block;
+  margin: 10px;
+  border-bottom: 1px solid #B6C2D6;
+}
+
+#hiring-lead img {
+  border-radius: 50%;
+  height: 90px;
+  margin: 0;
+  width: 90px;
+}
+
+#hiring-lead p {
+  text-align: center;
+}
+
+
+/* MISC */
+.divider {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.divider-arrow {
+  border: 1px solid #B6C2D6;
+  border-radius: 50%;
+  color: #B6C2D6;
+  display: block;
+  height: 20px;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+  width: 20px;
+}
+
+.horizontal-rule {
+  background-color: #B6C2D6;
+  border: none;
+  color: #B6C2D6;
+  display: block;
+  height: 2px;
+  width: 45%;
+}
+
+#job-nav-link-summary {
+  color: black;
+  font-weight: 500;
+  border-bottom: 3px solid #39a9f1;
+  padding-bottom: 8px;
+}
+
+
+/* Graphs */
+#circle-graphs {
+  display: flex;
+}
+
+.circle {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 155px;
+  justify-content: center;
+  margin: 20px;
+  width: 155px;
+}
+
+.page-button-totals, .page-button-applications {
+  background-color: #FFFFFF;
+  border: 3px solid #DBE4EB;
+  border-radius: 25px;
+  color: #354052;
+  font-weight: 700;
+  padding: 10px;
+  width: 220px;
+  text-align: center;
+}
+
+.page-button-totals:hover, .page-button-applications:hover {
+  background-color: #354052;
+  color: #FFFFFF;
+}
+
+.graph-1 {
+  background-color: #EDF2EC;
+  border-color: #4EB8BF #DBE4EB #4EB8BF #4EB8BF;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.graph-2 {
+  background-color: #EDF2EC;
+  border-color: #F8F272 #F8F272 #DBE4EB #F8F272;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.graph-3 {
+  background-color: #EDF2EC;
+  border-color: #DBE4EB #C46D6D #C46D6D #C46D6D;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.line-graph-graphic {
+  background-image: url(assets/img/line-graph.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /*display: inline-block;*/
+  margin: 0;
+  height:500px;
+  width: 500px;
+}
+
+
+/* Widget Aside */
+#facebook-btn, #linkedin-btn, #twitter-btn {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 99%;
+  height: 25px;
+  margin: 10px 0;
+  width: 25px;
+}
+
+#facebook-btn {
+  /*background-color: #495395;*/
+  background-image: url(assets/img/widgets/facebook.svg);
+}
+
+#linkedin-btn {
+  background-color: #0084b4;
+  background-image: url(assets/img/widgets/linkedin.svg);
+}
+
+#twitter-btn {
+  background-color: #39a9f1;
+  background-image: url(assets/img/widgets/twitter.svg);
 }

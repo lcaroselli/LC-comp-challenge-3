@@ -2,104 +2,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>Indiana Mole Women</title>
 </head>
 
 <body>
-  <aside class="nav-aside">
-    <nav class="nav-container" role="navigation">
-      <div class="user-block">
-        <div class="user-image" alt="Avatar image of the currently logged in user"></div>
-        <p class="user-info">
-          <h6 class="user-name">Kimmy Schmidt</h6>
-        </p>
-      </div>
-      <section class="nav-main">
-        <h4>Main</h4>
-        <div class="nav-main-content">
-          <a href="#" class="nav-link">Home</a>
-        </div>
-        <div class="nav-main-content">
-          <a href="#" class="nav-link">Jobs</a>
-        </div>
-        <div class="nav-main-content">
-          <a href="#" class="nav-link">Resumes</a>
-        </div>
-        <div class="nav-main-content">
-          <a href="#" class="nav-link">Skills</a>
-        </div>
-        <div class="nav-main-content">
-          <a href="#" class="nav-link">Calendar</a>
-        </div>
-      </section>
-      <section class="nav-admin">
-        <h4>Admin</h4>
-        <div class="nav-admin-content">
-          <a href="#" class="nav-link">Users</a>
-        </div>
-        <div class="nav-admin-content">
-          <a href="#" class="nav-link">Locations</a>
-        </div>
-        <div class="nav-admin-content">
-          <a href="#" class="nav-link">Workflows</a>
-        </div>
-        <div class="nav-admin-content">
-          <a href="#" class="nav-link">Job Boards</a>
-        </div>
-        <div class="nav-admin-content">
-          <a href="#" class="nav-link">Social</a>
-        </div>
-      </section>
-      <section class="nav-categories">
-        <h4>Categories</h4>
-        <div class="nav-categories-content">
-          <input type="checkbox" id="admin-checkbox" name="checkbox" aria-hidden="true" aria-label="Administrative">
-          <label for="admin-checkbox"><a href="#" class="nav-link checkbox">Administrative</a></label>
-        </div>
-        <div class="nav-categories-content">
-          <input type="checkbox" id="design-checkbox" name="checkbox" aria-hidden="true" aria-label="Design">
-          <label for="design-checkbox"><a href="#" class="nav-link checkbox">Design</a></label>
-        </div>
-        <div class="nav-categories-content">
-          <input type="checkbox" id="executive-checkbox" name="checkbox" aria-hidden="true" aria-label="Executive">
-          <label for="executive-checkbox"><a href="#" class="nav-link checkbox">Executive</a></label>
-        </div>
-        <div class="nav-categories-content">
-          <input type="checkbox" id="human-resources-checkbox" name="checkbox" aria-hidden="true" aria-label="Human Resources">
-          <label for="human-resources-checkbox"><a href="#" class="nav-link checkbox">Human Resources</a></label>
-        </div>
-      </section>
-    </nav>
-  </aside>
-
-  <main class="main-container" role="main">
-    <header class="main-header">
-      <span id="navigate-site-btn"></span>
-      <span id="search-bar-btn"></span>
-      <input type="text" name="search-bar" placeholder="Search for a bunker, mole woman, or Indiana" class="search-input" role="search" />
-      <span id="add-user-btn"></span>
-      <span id="calendar-btn"></span>
-      <span id="grid-btn"></span>
-    </header>
-
-    <section class="job-container">
-      <span id="job-title">
-        <h3>Indiana Mole Woman</h3>
-        <p id="location">Indianapolis, IN <a href="#">Preview this post</a></p>
-      </span>
-      <span id="open-btn"></span>
-      <span id="bookmark-btn"></span>
-      <span id="edit-btn"></span>
-      <span id="home-btn"></span>
+  <aside id="nav-aside" role="navigation">
+    <section id="user-block">
+      <div id="user-image" alt="Headshot image of the currently logged in user"></div>
+      <h6 id="user-name">
+        Kimmy Schmidt
+        <div class="nav-user-name" id="nav-down-arrow" alt="Image of an arrow indicating a drop-down menu"></div></h6>
     </section>
 
-    <section class="job-container-nav">
-      <nav class="current-job-nav">
+    <section id="nav-main">
+      <h4>Main</h4>
+      <a href="#" class="nav-link"><span id="nav-home"></span>Home</a>
+      <a href="#" class="nav-link"><span id="nav-jobs"></span>Jobs</a>
+      <a href="#" class="nav-link"><span id="nav-resume"></span>Resumes</a>
+      <a href="#" class="nav-link"><span id="nav-task"></span>Tasks</a>
+      <a href="#" class="nav-link"><span id="nav-calendar"></span>Calendar</a>
+    </section>
+
+    <section id="nav-admin">
+      <h4>Admin</h4>
+      <a href="#" class="nav-link"><span id="nav-users"></span>Users</a>
+      <a href="#" class="nav-link"><span id="nav-locations"></span>Locations</a>
+      <a href="#" class="nav-link"><span id="nav-workflows"></span>Workflows</a>
+      <a href="#" class="nav-link"><span id="nav-job-boards"></span>Boards</a>
+      <a href="#" class="nav-link"><span id="nav-social"></span>Social</a>
+    </section>
+
+    <section id="nav-categories">
+      <h4>Categories</h4>
+      <div class="checkboxes" aria-checked="true">
+        <input type="checkbox" class="nav-categories-content" id="admin-checkbox" name="checkbox" aria-hidden="true" aria-label="Administrative">
+        <label for="admin-checkbox"><a href="#" class="nav-link checkbox nav-checkbox">Administrative</a></label>
+      </div>
+      <div class="checkboxes">
+        <input type="checkbox" id="design-checkbox" class="nav-categories-content" name="checkbox" aria-hidden="true" aria-label="Design">
+        <label for="design-checkbox"><a href="#" class="nav-link checkbox nav-checkbox">Design</a></label>
+      </div>
+      <div class="checkboxes">
+        <input type="checkbox" id="human-resources-checkbox" class="nav-categories-content" name="checkbox" aria-hidden="true" aria-label="Human Resources">
+        <label for="human-resources-checkbox"><a href="#" class="nav-link checkbox nav-checkbox">Resources</a></label>
+      </div>
+      <div class="checkboxes">
+        <input type="checkbox" id="executive-checkbox" class="nav-categories-content" name="checkbox" aria-hidden="true" aria-label="Executive">
+        <label for="executive-checkbox"><a href="#" class="nav-link checkbox nav-checkbox">Executive</a></label>
+      </div>
+    </section>
+  </aside>
+
+  <main id="main-container" role="main">
+    <header id="main-header">
+      <div id="navigate-site-btn" alt="navigation button for the main site"></div>
+      <input type="text" name="search-bar" placeholder="Search for a bunker, mole woman, or Indiana" class="search-input" role="search" />
+      <div id="add-user-btn" alt="add a user button"></div>
+      <div id="calendar-btn" alt="view calendar button"></div>
+      <div id="grid-btn" alt="page layout button"></div>
+    </header>
+
+    <section id="job-container">
+      <span id="job-title-span">
+        <h3 id="job-title">Indiana Mole Woman</h3>
+        <p id="location"><img src="assets/img/aside/location.svg" alt="location marker for Indianapolis, IN">Indianapolis, IN - <a href="#">Preview this post</a></p></span>
+      <button id="open-button" alt="open this job button"></button>
+      <button id="bookmark-button" alt="bookmark this job button"></button>
+      <button id="edit-button" alt="edit this job button"></button>
+      <button id="home-button" alt="return to homepage button"></button>
+    </section>
+
+    <section id="job-container-nav">
+      <nav id="current-job-nav">
         <span class="current-job-nav-content">
-          <a href="#" class="job-nav-link">Summary</a>
+          <a href="#" class="job-nav-link" id="job-nav-link-summary">Summary</a>
         </span>
         <span class="current-job-nav-content">
           <a href="#" class="job-nav-link">Applicants</a>
@@ -122,76 +101,84 @@
       </nav>
     </section>
 
-    <section class="graphic-container">
-      <div class="circle-graphs">
-        <span class="circle graph-1" aria-label="Number of applicants">
-          <h3>3,154</h3>
-          <p>APPLICANTS</p>
-        </span>
-        <span class="circle graph-2" aria-label="Number of interviews">
-          <h3>1,546</h3>
-          <p>INTERVIEWS</p>
-        </span>
-        <span class="circle graph-3" aria-label="Number of forwards">
-          <h3>912</h3>
-          <p>FORWARDS</p>
-        </span>
-        <div class="page-button">TOTALS - Out of 5,231 views</div>
+    <section id="main-section-container">
+      <section id="graphic-container">
+        <div id="circle-graphs">
+          <span class="circle graph-1" aria-label="Number of applicants">
+            <h3>3,154</h3>
+            <p>APPLICANTS</p>
+          </span>
+          <span class="circle graph-2" aria-label="Number of interviews">
+            <h3>1,546</h3>
+            <p>INTERVIEWS</p>
+          </span>
+          <span class="circle graph-3" aria-label="Number of forwards">
+            <h3>912</h3>
+            <p>FORWARDS</p>
+          </span>
+          <div id="button-container">
+          <label for="page-total-button"><button class="page-button-totals">TOTALS - Out of 5,231 views</button></label>
+          </div>
+        <div id="line-graph">
+          <div class="line-graph-date"></div>
+          <div class="line-graph-graphic"></div>
+          <div class="page-button-applications">APPLICANTS/DAY</div>
+        </div>
+      </section>
+
+      <div class="divider">
+        <div class="horizontal-rule"></div>
+        <img src="assets/img/up-arrow.svg" alt="arrow button to toggle job description" class="divider-arrow">
+        <div class="horizontal-rule"></div>
       </div>
 
-      <div class="line-graph">
-        <div class="line-graph-date"></div>
-        <div class="line-graph-graphic"></div>
-        <div class="page-button">APPLICANTS/DAY</div>
-      </div>
-      <div class="horizontal-line-graphic"></div>
+    <section id="job-description-container">
+      <article id="job-description-panel">
+        <header id="job-description-header">
+          <h3>Job Description</h3>
+          <button id="edit-job-btn">Edit</button>
+        </header>
+        <div id="position-title">
+          <h3>Position Title</h3>
+          <p>Babysitter, Party Planner Extraordinaire</p>
+        </div>
+        <div id="location-title">
+          <h3>Location</h3>
+          <p>Indiana and New York</p>
+        </div>
+        <div id="employment-type">
+          <h3>Employment Type</h3>
+          <p>Full-time</p>
+        </div>
+        <div id="experience-title">
+          <h3>Experience</h3>
+          <p>Entry</p>
+        </div>
+        <div id="status-title">
+          <h3>Status</h3>
+          <p>Open</p>
+        </div>
+        <div id="description-title">
+          <h3>Description</h3>
+          <p>The Babysitter/Party Planner Extraordinaire is required to supervise <strike>zan-puppy..?</strike> Xanthippe and Buckley. Additional duties include emotionally comforting Jacqueline, planning Buckley's birthday party, and remaining a positve ray of sunshine to brighten everyone's day!</p>
+        </div>
+        <div id="hiring-lead">
+          <h3>Hiring Lead</h3>
+          <p><img src="assets/img/JaneKrakowskiicon.png" alt="Headshot icon of actress Jane Krakowski portraying Jacqueline White from the TV show Kimmy Schmidt"/> Jacqueline White</p>
+        </div>
+        <div id="approved-salary">
+          <h3>Approved Salary</h3>
+          <p>$2.00 and some diet water</p>
+        </div>
+      </article>
     </section>
-
-    <article class="job-description-container">
-      <header class="job-description-header">
-        <h3>Job Description</h3>
-        <span class="edit-job-btn"></span>
-      </header>
-      <div class="position-title">
-        <h3>Position Title</h3>
-        <p></p>
-      </div>
-      <div class="location-title">
-        <h3>Location</h3>
-        <p></p>
-      </div>
-      <div class="employment-type">
-        <h3>Employment Type</h3>
-        <p></p>
-      </div>
-      <div class="experience-title">
-        <h3>Experience</h3>
-        <p></p>
-      </div>
-      <div class="status-title">
-        <h3>Status</h3>
-        <p></p>
-      </div>
-      <div class="description-title">
-        <h3>Description</h3>
-        <p></p>
-      </div>
-      <div class="hiring-lead">
-        <h3>Hiring Lead</h3>
-        <p></p>
-      </div>
-      <div class="approved-salary">
-        <h3>Approved Salary</h3>
-        <p></p>
-      </div>
-    </article>
 
     <aside class="side-widget-container">
       <section class="widget-container">
         <div class="social-media-btns">
-          <div id="facebook-btn"></div>
-          <div id="twitter-btn"></div>
-          <div id="linkedin-btn"></div>
+          <div id="facebook-btn" alt="facebook widget button"></div>
+          <div id="twitter-btn" alt="twitter widget button"></div>
+          <div id="linkedin-btn" alt="linked-in widget button"></div>
         </div>
       </section>
       <section class="link-job">
@@ -218,6 +205,5 @@
         </div>
       </section>
     </aside>
-
   </main>
 </body>
