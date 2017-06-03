@@ -23,8 +23,9 @@ section h4 {
 /* Nav Aside */
 #nav-aside {
   background-color: #354052;
-  padding-right: 20px;
+  padding-right: 10px;
   padding-top: 15px;
+  width: 180px;
 }
 
 #nav-admin, #nav-categories, #nav-main {
@@ -54,6 +55,7 @@ section h4 {
 }
 
 .nav-link {
+  border-left: 2px solid #354052;
   display: block;
   font-size: 15px;
   padding-top: 5px;
@@ -61,8 +63,8 @@ section h4 {
 }
 
 .nav-link:hover {
-  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  background-color: rgba(38, 46, 59, 0.84);
+  border-left: 2px solid teal;
 }
 
 .nav-link, #user-name {
@@ -255,10 +257,20 @@ input[type="checkbox"] {
 }
 
     /* Job Container */
-#job-container, #job-container-nav, #graphic-container, #
+#job-container, #job-container-nav, #graphic-container,
 #job-description-container {
   margin-left: 20px;
   margin-bottom: 20px;
+}
+
+#nav-holder {
+  display: flex;
+}
+
+#nav-holder-buttons {
+  position: relative;
+  left: 600px;
+  top: -30px;
 }
 
 #job-title {
@@ -282,7 +294,56 @@ input[type="checkbox"] {
   color: #1FB8E2;
   text-decoration: none;
 }
-/*INCLUDE BUTTON STYLING HERE*/
+
+#open-button {
+  background-color: #FFFFFF;
+  border: 3px solid #DBE4EB;
+  border-radius: 25px;
+  color: #354052;
+  font-weight: 600;
+  height: 30px;
+  padding: 7px;
+  text-align: center;
+  width: 90px;
+}
+
+#open-button img {
+  height: 15px;
+  width: 15px;
+}
+
+#open-button:hover {
+  border: 3px solid #354052;
+}
+
+#bookmark-button, #edit-button, #next-button {
+  background-clip: content-box;
+  background-color: #FFFFFF;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 35%;
+  border: 3px solid #DBE4EB;
+  border-radius: 50%;
+  height: 22px;
+  padding: 10px;
+  width: 22px;
+}
+
+#bookmark-button:hover, #edit-button:hover, #next-button:hover {
+  border: 3px solid #354052;
+}
+
+#bookmark-button {
+  background-image: url(assets/img/bookmark.svg);
+}
+
+#edit-button {
+  background-image: url(assets/img/create-new-pencil-button.svg);
+}
+
+#next-button {
+  background-image: url(assets/img/next.svg);
+}
 
     /* Job Container Navigation */
 .current-job-nav-content  a {
@@ -303,17 +364,11 @@ input[type="checkbox"] {
 }
 
     /* Job Description Container */
-#job-description-container {
-  margin-bottom: 0;
-}
-
 #job-description-panel {
   background-color: #FFFFFF;
-  width: 50%;
-}
-
-#job-description-panel p {
-  display: inline-block;
+  border: 1px solid black;
+  margin: 0 40px;
+  width: 60%;
 }
 
 #job-description-header {
@@ -322,35 +377,28 @@ input[type="checkbox"] {
   height: 70px;
 }
 
-#job-description-header h3 {
+#job-description-header {
   font-weight: 400;
-}
-
-#position-title h3, #location-title h3, #employment-type h3, #experience-title h3, #status-title h3, #description-title h3, #hiring-lead h3, #approved-salary h3 {
-  color: #9CA6B7;
-  font-weight: 400;
-  margin-right: 20px;
 }
 
 #position-title, #location-title, #employment-type, #experience-title, #status-title, #description-title, #hiring-lead, #approved-salary {
+  color: #9CA6B7;
+  font-weight: 400;
+  padding-right: 100px;
   display: block;
   margin: 10px;
   border-bottom: 1px solid #B6C2D6;
 }
 
-#hiring-lead img {
+#hiring-lead-img {
   border-radius: 50%;
   height: 90px;
   margin: 0;
   width: 90px;
 }
 
-#hiring-lead p {
-  text-align: center;
-}
 
-
-/* MISC */
+/* Divider */
 .divider {
   align-items: center;
   display: flex;
@@ -389,8 +437,23 @@ input[type="checkbox"] {
 
 
 /* Graphs */
-#circle-graphs {
+#graphic-container {
   display: flex;
+  flex-direction: row;
+  margin: 0 20px;
+}
+
+#circle-graphs {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  width: 52%;
+}
+
+#donuts {
+  display: flex;
+  flex-direction: row;
 }
 
 .circle {
@@ -401,6 +464,13 @@ input[type="checkbox"] {
   justify-content: center;
   margin: 20px;
   width: 155px;
+}
+
+#lines {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
 }
 
 .page-button-totals, .page-button-applications {
@@ -448,34 +518,111 @@ input[type="checkbox"] {
   background-position: right;
   background-repeat: no-repeat;
   background-size: 100%;
-  /*display: inline-block;*/
   margin: 0;
-  height:500px;
+  height:213px;
   width: 500px;
 }
 
 
 /* Widget Aside */
-#facebook-btn, #linkedin-btn, #twitter-btn {
+#job-description-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+
+#side-widget-container {
+  margin-left: 0px;
+  margin-right: 40px;
+  width: 36%;
+}
+
+#facebook-button, #linkedin-button, #twitter-button {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 99%;
-  height: 25px;
-  margin: 10px 0;
-  width: 25px;
+  background-size: 140%;
+  cursor: pointer;
+  height: 30px;
+  margin: 10px 10px;
+  text-align: right;
+  width: 10px;
+  vertical-align: middle;
 }
 
-#facebook-btn {
-  /*background-color: #495395;*/
+#facebook-container {
+  background-color: #3b539a;
+}
+
+#facebook-button {
+  background-color: #3b539a;
   background-image: url(assets/img/widgets/facebook.svg);
+  border: none;
 }
 
-#linkedin-btn {
+#linkedin-container {
+  background-color: #0084b4;
+}
+
+#linkedin-button {
   background-color: #0084b4;
   background-image: url(assets/img/widgets/linkedin.svg);
+  border: none;
 }
 
-#twitter-btn {
+#twitter-container {
+  background-color: #39a9f1;
+}
+
+#twitter-button {
   background-color: #39a9f1;
   background-image: url(assets/img/widgets/twitter.svg);
+  border: none;
+}
+
+.copy {
+  background-color: teal;
+  border: 2px solid teal;
+  color: #FFFFFF;
+  cursor: pointer;
+  height: 36px;
+  margin-bottom: 30px;
+  width: 75px;
+}
+
+.copy:hover {
+  background-color: #FFFFFF;
+  border: 2px solid teal;
+  color: teal;
+}
+
+.sidebar-input, .upload-resume-container {
+  height: 38px;
+  width: 300px;
+}
+
+.link-job h5, .use-button-widget h5, .upload-resume h5 {
+  color: #58677C;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.link-job p, .use-button-widget p, .upload-resume p {
+  color: #7F8791;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.widget-container a {
+  color: #FFFFFF;
+  padding-left: 120px;
+  text-decoration: none;
+}
+
+#facebook-container, #twitter-container, #linkedin-container {
+  margin-bottom: 15px;
+}
+
+.link-job-container, .use-button-container {
+  border-bottom: 2px solid #B6C2D6;
 }
