@@ -60,6 +60,7 @@ section h4 {
   font-size: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
+  padding-left: 5px;
 }
 
 .nav-link:hover {
@@ -146,6 +147,12 @@ section h4 {
   top: -23px;
   left: 14px;
   text-decoration: none;
+}
+
+.nav-checkbox:hover {
+  background-color: #354052;
+  color: #9CA6B7;
+  border: none;
 }
 
 input[type="checkbox"] {
@@ -366,7 +373,7 @@ input[type="checkbox"] {
     /* Job Description Container */
 #job-description-panel {
   background-color: #FFFFFF;
-  border: 1px solid black;
+  border: 1px solid #78849E;
   margin: 0 40px;
   width: 60%;
 }
@@ -374,27 +381,58 @@ input[type="checkbox"] {
 #job-description-header {
   background-color: #78849E;
   color: #FFFFFF;
+  font-weight: 400;
   height: 70px;
+  padding-left: 15px;
+  text-align: left;
 }
 
-#job-description-header {
-  font-weight: 400;
+#job-description-header button {
+  background-color: #9CA6B7;
+  border: none;
+  color: #FFFFFF;
+  height: 35px;
+  margin-left: 90px;
+  width: 70px;
+}
+
+#job-description-header button:hover {
+  background-color: #FFFFFF;
+  color: #9CA6B7;
+  cursor: pointer;
+}
+
+#job-description-header img {
+  height: 15px;
+  width: 15px;
 }
 
 #position-title, #location-title, #employment-type, #experience-title, #status-title, #description-title, #hiring-lead, #approved-salary {
   color: #9CA6B7;
+  padding-left: 15px;
+  width: 31%;
+}
+
+td {
   font-weight: 400;
-  padding-right: 100px;
-  display: block;
+  height: 60px;
   margin: 10px;
-  border-bottom: 1px solid #B6C2D6;
+  padding-right: 100px;
 }
 
 #hiring-lead-img {
   border-radius: 50%;
-  height: 90px;
-  margin: 0;
-  width: 90px;
+  height: 75px;
+  margin: 10px 0;
+  width: 75px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border-bottom: 1px solid #B6C2D6;
 }
 
 
