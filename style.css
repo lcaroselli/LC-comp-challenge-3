@@ -369,7 +369,11 @@ input[type="checkbox"] {
 #main-section-container {
   background-color: #EDF2EC;
   border-top: 3px solid #D4E2F9;
-  /*width: 100vw;*/
+}
+
+.hide-here {
+  display: none;
+  visibility: hidden;
 }
 
     /* Divider */
@@ -466,28 +470,23 @@ input[type="checkbox"] {
 }
 
   /*Graph Colors & Images*/
-.graph-1 {
+.graph-1, .graph-2, .graph-3 {
   background-color: #EDF2EC;
-  border-color: #4EB8BF #4EB8BF #4EB8BF #DBE4EB;
   border-radius: 50%;
   border-style: solid;
   border-width: 10px;
+}
+
+.graph-1 {
+  border-color: #4EB8BF #4EB8BF #4EB8BF #DBE4EB;
 }
 
 .graph-2 {
-  background-color: #EDF2EC;
   border-color: #F8F272 #F8F272 #DBE4EB #DBE4EB;
-  border-radius: 50%;
-  border-style: solid;
-  border-width: 10px;
 }
 
 .graph-3 {
-  background-color: #EDF2EC;
   border-color: #C46D6D #DBE4EB #DBE4EB #DBE4EB;
-  border-radius: 50%;
-  border-style: solid;
-  border-width: 10px;
 }
 
 .line-graph-graphic {
@@ -495,19 +494,31 @@ input[type="checkbox"] {
   background-position: right;
   background-repeat: no-repeat;
   background-size: 100%;
-  margin: 0;
   height:213px;
   width: 500px;
 }
 
-    /* START EDITS HERE!!!!!!!!! Job Description Container */
-#job-description-panel {
-  background-color: #FFFFFF;
+  /* Job Description Container */
+#approved-salary, #description-title,#employment-type, #experience-title, #hiring-lead, #location-title, #position-title, #status-title {
+  color: #9CA6B7;
+  padding-left: 15px;
+  width: 31%;
+}
+
+#hiring-lead-img {
+  border-radius: 50%;
+  height: 75px;
+  margin: 10px 0;
+  width: 75px;
+}
+
+#job-description-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  height: 741px;
-  margin: 0 40px;
-  max-width: 880px;
+  height: 100vh;
+  margin: 0px;
+  padding-bottom: 70px;
 }
 
 #job-description-header {
@@ -539,24 +550,12 @@ input[type="checkbox"] {
   width: 15px;
 }
 
-#position-title, #location-title, #employment-type, #experience-title, #status-title, #description-title, #hiring-lead, #approved-salary {
-  color: #9CA6B7;
-  padding-left: 15px;
-  width: 31%;
-}
-
-td {
-  font-weight: 400;
-  height: 76px;
-  margin: 10px;
-  padding-right: 100px;
-}
-
-#hiring-lead-img {
-  border-radius: 50%;
-  height: 75px;
-  margin: 10px 0;
-  width: 75px;
+#job-description-panel {
+  background-color: #FFFFFF;
+  display: flex;
+  height: 741px;
+  margin: 0 40px;
+  max-width: 880px;
 }
 
 table {
@@ -565,24 +564,18 @@ table {
 
 td {
   border-bottom: 1px solid #B6C2D6;
+  font-weight: 400;
+  height: 76px;
+  margin: 10px;
+  padding-right: 100px;
 }
 
 /* Widget Aside */
-#job-description-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 100vh;
-  margin: 0px;
-  padding-bottom: 70px;
-}
-
 #side-widget-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 741px;
-  margin-left: 0px;
   margin-right: 40px;
   max-width: 520px;
 }
@@ -689,7 +682,7 @@ td {
 
 
 /* Media Queries */
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1380px) {
   .circle {
     height: 220px;
     width: 220px;
@@ -809,6 +802,16 @@ td {
 }
 
 @media screen and (max-width: 1040px) {
+  .circle {
+    font-size: 13px;
+    height: 150px;
+    width: 150px;
+  }
+
+  #current-job-nav {
+    margin-top: 100px;
+  }
+
   #graphic-container {
     align-items: center;
     display: flex;
@@ -816,8 +819,9 @@ td {
     justify-content: center;
   }
 
-  #nav-aside{
-    display: none;
+  .hide-here {
+    display: inline-block;
+    visibility: visible;
   }
 
   #job-title {
@@ -827,6 +831,20 @@ td {
   #job-title-span {
     position: relative;
     top: -40px;
+  }
+
+  #nav-aside{
+    display: none;
+  }
+
+  .nav-hidden {
+    display: none;
+  }
+
+  #nav-holder-buttons{
+    position: relative;
+    left: 0;
+    top: -10px;
   }
 
   #user-image-2 {
@@ -846,4 +864,14 @@ td {
   }
 }
 
-@media screen and (max-width: 840px)
+@media screen and (max-width: 700px) {
+  #nav-holder-buttons, #user-image-2 {
+    display: none;
+  }
+
+  #job-title-span {
+    position: relative;
+    top: 20px;
+    margin: auto;
+  }
+}
