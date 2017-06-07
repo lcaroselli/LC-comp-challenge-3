@@ -203,7 +203,7 @@ input[type="checkbox"] {
   width: 100%;
 }
     /* Header */
-#add-user-btn, #calendar-btn, #grid-btn, #navigate-site-btn, .search-input {
+#add-user-btn, #calendar-btn, #grid-btn, #more-btn, #navigate-site-btn, .search-input {
   background-clip: content-box;
   background-position: center;
   background-repeat: no-repeat;
@@ -216,7 +216,7 @@ input[type="checkbox"] {
   width: 60px;
 }
 
-#add-user-btn:hover, #calendar-btn:hover, #grid-btn:hover, #navigate-site-btn:hover {
+#add-user-btn:hover, #calendar-btn:hover, #grid-btn:hover, #more-btn:hover, #navigate-site-btn:hover {
   box-shadow: 0 3px 4px rgba(0,0,0,0.15);
   cursor: pointer;
   transition: box-shadow 0.3s ease-in-out;
@@ -239,6 +239,11 @@ input[type="checkbox"] {
   width: 80%;
 }
 
+#more-btn {
+  display: none;
+  visibility: hidden;
+}
+
   /* Header Button Images*/
 #add-user-btn {
   background-image: url(assets/img/header/add-contact.svg);
@@ -250,6 +255,10 @@ input[type="checkbox"] {
 
 #grid-btn {
   background-image: url(assets/img/header/grid.svg);
+}
+
+#more-btn {
+  background-image: url(assets/img/header/more.svg);
 }
 
 #navigate-site-btn {
@@ -558,6 +567,11 @@ input[type="checkbox"] {
   max-width: 880px;
 }
 
+#job-description-toggle {
+  display: none;
+  visibility: hidden;
+}
+
 table {
   border-collapse: collapse;
 }
@@ -590,6 +604,11 @@ td {
   text-align: right;
   width: 10px;
   vertical-align: middle;
+}
+
+#facebook-button-img, #linkedin-button-img, #twitter-button-img {
+  display: none;
+  visibility: hidden;
 }
 
 #facebook-container {
@@ -682,7 +701,7 @@ td {
 
 
 /* Media Queries */
-@media screen and (max-width: 1380px) {
+@media screen and (max-width: 1350px) {
   .circle {
     height: 220px;
     width: 220px;
@@ -727,7 +746,7 @@ td {
     margin: auto;
     margin-top: 220px;
     margin-bottom: 0;
-    width: 70%;
+    width: 80%;
   }
 
   #job-title {
@@ -865,13 +884,156 @@ td {
 }
 
 @media screen and (max-width: 700px) {
-  #nav-holder-buttons, #user-image-2 {
+  #add-user-btn, #calendar-btn, #grid-btn, #navigate-site-btn {
+    display: none;
+    visibility: hidden;
+  }
+
+  #facebook-container, #linkedin-container, #twitter-container {
+    display: none;
+  }
+
+  #facebook-button-img, #linkedin-button-img, #twitter-button-img {
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    padding: 10px;
+    width: 50px;
+    vertical-align: middle;
+    visibility: visible;
+  }
+
+  #facebook-button-img:hover, #linkedin-button-img:hover, #twitter-button-img:hover {
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.15);
+    transition: box-shadow 0.2s ease-in-out;
+  }
+
+  #more-btn {
+    display: flex;
+    visibility: visible;
+    width: 20%;
+  }
+
+  #nav-holder-buttons {
     display: none;
   }
 
   #job-title-span {
     position: relative;
-    top: 20px;
+    top: -30px;
     margin: auto;
+  }
+
+  #side-widget-container {
+    position: relative;
+    top: -50px;
+    margin-top: 0;
+  }
+
+  .social-media-buttons {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  #donuts {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  #circle-graphs {
+    margin-bottom: 560px;
+    width: 100vw;
+  }
+
+  #job-description-panel {
+    display: none;
+  }
+
+  #job-description-toggle {
+    background-color: #78849E;
+    color: #FFFFFF;
+    display: block;
+    font-size: 18px;
+    height: 80px;
+    margin-top: 35px;
+    position: relative;
+    top: 180px;
+    text-align: center;
+    width: 400px;
+    visibility: visible;
+  }
+
+  #job-description-toggle p {
+    margin-bottom: 10px;
+  }
+
+  #job-description-toggle img {
+    height: 25px;
+    margin-top: 0;
+    width: 25px;
+  }
+
+  #job-description-toggle img:hover {
+    cursor: pointer;
+  }
+
+  .line-graph-graphic {
+    margin-top: 50px;
+    height: 350px;
+    width: 350px;
+  }
+
+  #main-container {
+    width: auto
+  }
+
+  .search-input {
+    display: flex;
+    width: 80%;
+  }
+
+  #main-section-container {
+    padding-bottom: 500px;
+  }
+
+  #side-widget-container {
+    padding: 10px;
+    width: 280px;
+  }
+
+  .line-graph-graphic {
+    display: none;
+  }
+
+  .link-job-container, .use-button-container, .upload-resume-container {
+    border: none;
+  }
+
+  .link-job-container p, .use-button-container p, .upload-resume-container p {
+    display: none;
+  }
+
+  .link-job-container button, .use-button-container button, .upload-resume-container button {
+    margin-top: 10px;
+  }
+
+  .link-job-container h5, .use-button-container h5, .upload-resume-container h5 {
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  .nav-hidden-2 {
+    display: none;
+    visibility: hidden;
+  }
+
+  .social-media-buttons {
+    margin-top: 280px;
+  }
+
+  .page-button-totals, .page-button-applications {
+    display: none;
   }
 }

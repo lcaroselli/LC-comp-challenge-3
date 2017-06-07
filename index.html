@@ -63,6 +63,7 @@
     <header id="main-header">
       <div id="navigate-site-btn" alt="navigation button for the main site" role="navigation"></div>
       <input type="text" name="search-bar" placeholder="Search for a bunker, mole woman, or Indiana" class="search-input" role="search" />
+      <div id="more-btn" alt="drop-down menu button"></div>
       <div id="add-user-btn" alt="add a user button"></div>
       <div id="calendar-btn" alt="view calendar button"></div>
       <div id="grid-btn" alt="page layout button"></div>
@@ -89,10 +90,10 @@
           <a href="#" class="job-nav-link" id="job-nav-link-summary" aria-pressed="true">Summary</a>
         </span>
         <span class="current-job-nav-content">
-          <a href="#" class="job-nav-link">Applicants</a>
+          <a href="#" class="job-nav-link nav-hidden-2">Applicants</a>
         </span>
         <span class="current-job-nav-content">
-          <a href="#" class="job-nav-link">Job Board</a>
+          <a href="#" class="job-nav-link nav-hidden-2">Job Board</a>
         </span>
         <span class="current-job-nav-content">
           <a href="#" class="job-nav-link hide-here">More...</a>
@@ -147,6 +148,7 @@
       </div>
 
     <section id="job-description-container">
+      <article id="job-description-toggle"><p>Job Description</p> <img src="assets/img/toggle-down.svg" alt="toggle-down arrow button"/></article>
       <article id="job-description-panel">
         <table>
           <th id="job-description-header" role="header" colspan="2">Job Description
@@ -194,20 +196,26 @@
               <button id="facebook-button" alt="facebook widget button"></button>
               <a href="#">Post to Facebook</a>
             </div>
+            <img src="assets/img/widgets/facebook.svg" id="facebook-button-img" alt="facebook icon" aria-display="hidden" />
+
             <div id="twitter-container">
               <button id="twitter-button" alt="twitter widget button"></button>
               <a href="#">Tweet this job</a>
             </div>
+            <img src="assets/img/widgets/twitter.svg" id="twitter-button-img" alt="twitter icon" aria-display="hidden" />
+
             <div id="linkedin-container">
               <button id="linkedin-button" alt="linked-in widget button"></button>
               <a href="#">Post to LinkedIn</a>
             </div>
+            <img src="assets/img/widgets/linkedin.svg" id="linkedin-button-img" alt="linkedin icon" aria-display="hidden" />
+
           </div>
         </section>
         <section class="link-job">
           <div class="link-job-container">
             <h5><img src="assets/img/widgets/earth-globe.svg" alt="a globe icon indicating you can link to this job" id="globe-icon">Link to this job</h5>
-            <p>Sugar plum ice cream chocolate cake powder. Powder macaroon jelly-o. Tart gingerbread pie chocolate bar tootsie roll toffee danish.</p>
+            <p>Sugar plum ice cream chocolate cake powder. Powder macaroon jelly-o. Tart gingerbread pie.</p>
             <input type="text" value="http://www.this-job.com" class="sidebar-input">
             <button class="copy" aria-pressed="false">Copy</button>
           </div>
