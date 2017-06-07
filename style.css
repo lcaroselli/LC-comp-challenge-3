@@ -24,7 +24,7 @@ section h4 {
   background-color: #354052;
   padding-right: 10px;
   padding-top: 15px;
-  width: 180px;
+  min-width: 180px;
 }
 
 #nav-admin, #nav-categories, #nav-main {
@@ -127,6 +127,11 @@ section h4 {
   width: 130px;
 }
 
+#user-image-2 {
+  display: none;
+  visibility: hidden;
+}
+
 #user-name {
   font-size: 14px;
   font-weight: 300;
@@ -136,46 +141,42 @@ section h4 {
 }
 
     /* Checkboxes */
+#admin-checkbox[type="checkbox"]+label:before,
+#design-checkbox[type="checkbox"]+label:before, #human-resources-checkbox[type="checkbox"]+label:before, #executive-checkbox[type="checkbox"]+label:before {
+  border: 1px inset #9CA6B7;
+  content: "\00a0";
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+}
+
+#admin-checkbox[type="checkbox"]:checked+label:before, #design-checkbox[type="checkbox"]:checked+label:before, #executive-checkbox[type="checkbox"]:checked+label:before, #human-resources-checkbox[type="checkbox"]:checked+label:before {
+  color: #EDF2EC;
+  content: "\2713";
+  text-align: center;
+}
+
 .nav-checkbox {
   color: #9CA6B7;
   font-size: 13px;
+  left: 14px;
   margin-left: 8px;
   position: relative;
-  top: -23px;
-  left: 14px;
   text-decoration: none;
+  top: -23px;
 }
 
 .nav-checkbox:hover {
   background-color: #354052;
-  color: #9CA6B7;
   border: none;
+  color: #9CA6B7;
 }
 
 input[type="checkbox"] {
   display: none;
 }
 
-#admin-checkbox[type="checkbox"]+label:before,
-#design-checkbox[type="checkbox"]+label:before,
-#human-resources-checkbox[type="checkbox"]+label:before,
-#executive-checkbox[type="checkbox"]+label:before {
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  content: "\00a0";
-  border: 1px inset #9CA6B7;
-}
-
-#admin-checkbox[type="checkbox"]:checked+label:before,
-#design-checkbox[type="checkbox"]:checked+label:before,
-#executive-checkbox[type="checkbox"]:checked+label:before,
-#human-resources-checkbox[type="checkbox"]:checked+label:before {
-  content: "\2713";
-  text-align: center;
-  color: #EDF2EC;
-}
-
+  /*Checkbox Colors*/
 #admin-checkbox[type="checkbox"]+label:before,
 #admin-checkbox[type="checkbox"]:checked+label:before {
   background: #E8C812;
@@ -202,6 +203,25 @@ input[type="checkbox"] {
   width: 100%;
 }
     /* Header */
+#add-user-btn, #calendar-btn, #grid-btn, #navigate-site-btn, .search-input {
+  background-clip: content-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+  border-right: 1.5px solid #e6e9ef;
+  border-left: 1.5px solid #e6e9ef;
+  display: flex;
+  height: 30px;
+  padding: 20px;
+  width: 60px;
+}
+
+#add-user-btn:hover, #calendar-btn:hover, #grid-btn:hover, #navigate-site-btn:hover {
+  box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
 #main-header {
   border: 2px solid #e6e9ef;
   display: flex;
@@ -212,39 +232,24 @@ input[type="checkbox"] {
   background: url(assets/img/header/search.svg);
   background-position: 5px 27px;
   background-repeat: no-repeat;
-  background-size: 2.5%;
+  background-size: 20px;
   border: none;
   margin-left: 15px;
   padding-left:35px;
   width: 80%;
 }
 
-#navigate-site-btn, .search-input, #add-user-btn, #calendar-btn, #grid-btn {
-  background-clip: content-box;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 35%;
-  border-right: 1.5px solid #e6e9ef;
-  border-left: 1.5px solid #e6e9ef;
-  display: flex;
-  height: 30px;
-  margin: 0px;
-  padding: 20px;
-  width: 40px;
-}
-
-#navigate-site-btn:hover, #add-user-btn:hover, #calendar-btn:hover, #grid-btn:hover {
-  box-shadow: 0 3px 4px rgba(0,0,0,0.15);
-  cursor: pointer;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
+  /* Header Button Images*/
 #add-user-btn {
   background-image: url(assets/img/header/add-contact.svg);
 }
 
 #calendar-btn {
   background-image: url(assets/img/header/calendar.svg);
+}
+
+#grid-btn {
+  background-image: url(assets/img/header/grid.svg);
 }
 
 #navigate-site-btn {
@@ -255,12 +260,8 @@ input[type="checkbox"] {
   background-image: url(assets/img/header/search.svg);
 }
 
-#grid-btn {
-  background-image: url(assets/img/header/grid.svg);
-}
-
     /* Job Container */
-#job-container-nav, #graphic-container,
+#graphic-container, #job-container-nav,
 #job-description-container {
   margin-left: 20px;
   margin-bottom: 20px;
@@ -277,6 +278,7 @@ input[type="checkbox"] {
 }
 
 #job-title {
+  display: flex;
   font-size: 30px;
   font-weight: 300;
   margin-bottom: 5px;
@@ -289,14 +291,14 @@ input[type="checkbox"] {
   margin-top: 5px;
 }
 
-#location img {
-  height: 15px;
-  width: 15px;
-}
-
 #location a {
   color: #1FB8E2;
   text-decoration: none;
+}
+
+#location img {
+  height: 15px;
+  width: 15px;
 }
 
 #open-button {
@@ -311,19 +313,20 @@ input[type="checkbox"] {
   width: 75px;
 }
 
+#open-button:hover {
+  border: 3px solid #354052;
+}
+
 #open-button img {
   height: 15px;
   width: 15px;
 }
 
-#open-button:hover {
-  border: 3px solid #354052;
-}
 
+  /* Header Images */
 #bookmark-button, #edit-button, #next-button {
   background-clip: content-box;
-  background-color: #FFFFFF;
-  background-position: center;
+  background-color: #FFFFFF;    background-position: center;
   background-repeat: no-repeat;
   background-size: 35%;
   border: 3px solid #DBE4EB;
@@ -332,6 +335,7 @@ input[type="checkbox"] {
   padding: 8px;
   width: 20px;
 }
+
 
 #bookmark-button:hover, #edit-button:hover, #next-button:hover {
   border: 3px solid #354052;
@@ -365,6 +369,7 @@ input[type="checkbox"] {
 #main-section-container {
   background-color: #EDF2EC;
   border-top: 3px solid #D4E2F9;
+  /*width: 100vw;*/
 }
 
     /* Divider */
@@ -406,10 +411,14 @@ input[type="checkbox"] {
 }
 
 /* Graphs */
-#graphic-container {
+.circle {
+  align-items: center;
   display: flex;
-  flex-direction: row;
-  margin: 0 20px;
+  flex-direction: column;
+  height: 155px;
+  justify-content: center;
+  margin: 20px;
+  width: 155px;
 }
 
 #circle-graphs {
@@ -425,14 +434,11 @@ input[type="checkbox"] {
   flex-direction: row;
 }
 
-.circle {
-  align-items: center;
+#graphic-container {
   display: flex;
-  flex-direction: column;
-  height: 155px;
+  flex-direction: row;
   justify-content: center;
-  margin: 20px;
-  width: 155px;
+  margin: 0 20px;
 }
 
 #lines {
@@ -459,6 +465,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+  /*Graph Colors & Images*/
 .graph-1 {
   background-color: #EDF2EC;
   border-color: #4EB8BF #4EB8BF #4EB8BF #DBE4EB;
@@ -493,12 +500,14 @@ input[type="checkbox"] {
   width: 500px;
 }
 
-    /* Job Description Container */
+    /* START EDITS HERE!!!!!!!!! Job Description Container */
 #job-description-panel {
   background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
   height: 741px;
   margin: 0 40px;
-  width: 60%;
+  max-width: 880px;
 }
 
 #job-description-header {
@@ -562,16 +571,20 @@ td {
 #job-description-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   height: 100vh;
   margin: 0px;
   padding-bottom: 70px;
 }
 
 #side-widget-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 741px;
   margin-left: 0px;
   margin-right: 40px;
-  width: 36%;
+  max-width: 520px;
 }
 
 #facebook-button, #linkedin-button, #twitter-button {
@@ -676,6 +689,161 @@ td {
 
 
 /* Media Queries */
-@media screen and (max-width: 550px) {
-
+@media screen and (max-width: 1350px) {
+  .circle {
+    height: 220px;
+    width: 220px;
   }
+
+  #circle-graphs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100px;
+    justify-content: center;
+    margin: 50px auto;
+    width: 650px;
+  }
+
+  #current-job-nav {
+    margin-top: 70px;
+  }
+
+  #graphic-container {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+  }
+
+  #job-container {
+    display: flex;
+    height: 70px;
+  }
+
+  #job-description-container {
+    align-items: center;
+    flex-direction: column;
+    height: 60%;
+    justify-content: flex-start;
+    position: relative;
+    top: -200px;
+  }
+
+  #job-description-panel {
+    display: table;
+    height: 200px;
+    margin: auto;
+    margin-top: 220px;
+    margin-bottom: 0;
+    width: 70%;
+  }
+
+  #job-title {
+    font-size: 22px;
+  }
+
+  .line-graph-graphic {
+    flex-direction: row;
+    height: 400px;
+    margin: 120px auto 15px auto;
+  }
+
+  #location {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  #location img {
+    height: 15px;
+    width: 15px;
+  }
+
+  #main-section-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  #nav-holder-buttons {
+    position: inherit;
+  }
+
+  .page-button-totals {
+    font-size: 12px;
+    height: 10px;
+    position: inherit;
+    width: 180px;
+  }
+
+  .page-button-applications {
+    position: relative;
+    top: -90px;
+  }
+
+  .divider {
+    margin-top: 0;
+  }
+
+  #bookmark-button, #edit-button, #next-button {
+    height: 10px;
+    width: 10px;
+  }
+
+  #open-button {
+    font-size: 12px;
+    height: 20px;
+    padding: 0;
+    width: 50px;
+  }
+
+  #open-button img {
+    height: 10px;
+    width: 10px;
+  }
+
+  #side-widget-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  #graphic-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #nav-aside{
+    display: none;
+  }
+
+  #job-title {
+    display: inline-block;
+  }
+
+  #job-title-span {
+    position: relative;
+    top: -40px;
+  }
+
+  #user-image-2 {
+    background-image: url(assets/img/kimmy.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 99%;
+    border-radius: 50%;
+    display: inline-block;
+    height: 70px;
+    margin-top: 40px;
+    margin-left: 30px;
+    position: relative;
+    top: 30px;
+    width: 70px;
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 840px)

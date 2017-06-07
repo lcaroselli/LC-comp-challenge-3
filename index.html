@@ -70,15 +70,15 @@
 
     <section id="job-container">
       <span id="job-title-span">
-        <h3 id="job-title">Indiana Mole Woman</h3>
+        <h3 id="job-title">Indiana Mole Woman</h3> <span id="user-image-2"></span>
         <span id="nav-holder">
           <p id="location"><img src="assets/img/aside/location.svg" alt="location marker for Indianapolis, IN">Indianapolis, IN - <a href="#">Preview this post</a></p>
         </span>
         <span id="nav-holder-buttons">
           <button id="open-button" alt="open this job button"><img src="assets/img/circle.svg" alt"green dot"/>   Open</button>
-          <button id="bookmark-button" alt="bookmark this job button"></button>
-          <button id="edit-button" alt="edit this job button"></button>
-          <button id="next-button" alt="scroll to next job"></button>
+          <button id="bookmark-button" alt="bookmark this job button" aria-pressed="false"></button>
+          <button id="edit-button" alt="edit this job button" aria-pressed="false"></button>
+          <button id="next-button" alt="scroll to next job" aria-pressed="false"></button>
           </span>
         </span>
     </section>
@@ -147,7 +147,7 @@
       <article id="job-description-panel">
         <table>
           <th id="job-description-header" role="header" colspan="2">Job Description
-            <button id="edit-job-btn"><img src="assets/img/create-new-pencil-button.svg" alt"pencil edit icon"/>  Edit</button>
+            <button id="edit-job-btn"><img src="assets/img/create-new-pencil-button.svg" alt"pencil icon indicating you can edit this job description"/>  Edit</button>
           </th>
           <tr>
             <td  id="position-title">Position Title</td>
@@ -203,25 +203,25 @@
         </section>
         <section class="link-job">
           <div class="link-job-container">
-            <h5><img src="assets/img/widgets/earth-globe.svg" alt="globe icon" id="globe-icon">Link to this job</h5>
+            <h5><img src="assets/img/widgets/earth-globe.svg" alt="a globe icon indicating you can link to this job" id="globe-icon">Link to this job</h5>
             <p>Sugar plum ice cream chocolate cake powder. Powder macaroon jelly-o. Tart gingerbread pie chocolate bar tootsie roll toffee danish.</p>
             <input type="text" value="http://www.this-job.com" class="sidebar-input">
-            <button class="copy">Copy</button>
+            <button class="copy" aria-pressed="false">Copy</button>
           </div>
         </section>
         <section class="use-button-widget">
           <div class="use-button-container">
-            <h5> <img src="assets/img/widgets/computer-tablet.svg" alt="use widget icon" id="widget-icon">Use the Button Widget</h5>
+            <h5> <img src="assets/img/widgets/computer-tablet.svg" alt="tablet icon indicating you can use a widget" id="widget-icon">Use the Button Widget</h5>
             <p>Pastry tart pudding liquorice muffin jelly. Bear claw cake icing bonbon.</p>
             <input type="text" value="http://www.google.com" class="sidebar-input">
-            <button class="copy">Copy</button>
+            <button class="copy" aria-pressed="false">Copy</button>
           </div>
         </section>
         <section class="upload-resume">
           <div class="upload-resume-container">
-            <h5><img src="assets/img/widgets/paper-plane.svg" alt="upload resume icon" id="resume-icon">Upload Resumes by Email</h5>
+            <h5><img src="assets/img/widgets/paper-plane.svg" alt="paper plane icon indicating you can upload a resume" id="resume-icon">Upload Resumes by Email</h5>
             <p>Gingerbread wafer cupcake cheesecake soufflé cheesecake dessert powder.</p>
-            <input type="text" value="kimmy.schmidt@sunshine.org" class="sidebar-input">
+            <input type="text" value="kimmy@sunshine.org" class="sidebar-input">
           </div>
         </section>
       </aside>
